@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
@@ -59,9 +58,9 @@ int main(){
   jlm::adc_setup();
   sei();
   timer1Init();
-  Serial.println("test");
+  
   while(1){
-    //Serial.println(currentState);
+    
     currentTime = jlm::GetMillis();
     
     if((currentTime-timeSinceLastButton) > 200){
